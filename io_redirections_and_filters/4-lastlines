@@ -1,0 +1,2 @@
+#!/bin/bask
+tail /etc/passwd
