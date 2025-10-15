@@ -178,3 +178,6 @@
   ```
   
   ```
+
+### By Anthony Goutieras
+  Weekly project from 10/10/25 to 19/10/25 for Holberton School Bordeaux
