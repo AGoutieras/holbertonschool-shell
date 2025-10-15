@@ -114,7 +114,7 @@
 
 * [Task 16](./15-rot13): Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.
   ```
-  
+  tr 'A-Za-z' 'N-ZA-Mn-za-m'
   ```
 
 * [Task 17](./16-odd): Write a script that prints every other line from the input, starting with the first line.
