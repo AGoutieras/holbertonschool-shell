@@ -1,73 +1,121 @@
 # Shell, I/O Redirections and filters
 
 * [Task 0](./0-hello_world): Write a script that prints “Hello, World”, followed by a new line to the standard output.
-  ```
-  echo Hello, World
-  ```
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 1](./1-confused_smiley): Write a script that displays a confused smiley "(Ôo)'.
-  ```
-  echo "\"(Ôo)'"
-  ```
+    ```
+    echo Hello, World
+    ```
+  </details>
 
-* [Task 2](./2-hellofile): Display the content of the /etc/passwd file.
-  ```
-  cat /etc/passwd
-  ```
+* [Task 1](./1-confused_smiley): Write a script that displays a confused smiley $${\color{red}"(Ôo)'}$$.
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 3](./3-twofiles): Display the content of /etc/passwd and /etc/hosts
-  ```
-  cat /etc/passwd /etc/hosts
-  ```
+    ```
+    echo "\"(Ôo)'"
+    ```
+  </details>
 
-* [Task 4](./4-lastlines): Display the last 10 lines of /etc/passwd
-  ```
-  tail /etc/passwd
-  ```
+* [Task 2](./2-hellofile): Display the content of the $${\color{red}/etc/passwd}$$ file.
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 5](./5-firstlines): Display the first 10 lines of /etc/passwd
-  ```
-  head /etc/passwd
-  ```
+    ```
+    cat /etc/passwd
+    ```
+  </details>
 
-* [Task 6](./6-third_line): Write a script that displays the third line of the file iacta.
+* [Task 3](./3-twofiles): Display the content of $${\color{red}/etc/passwd}$$ and $${\color{red}/etc/hosts}$$
+  <details>
+    <summary>Show answer</summary>
 
-  The file iacta will be in the working directory
+    ```
+    cat /etc/passwd /etc/hosts
+    ```
+  </details>
 
-  * You’re not allowed to use sed
-  ```
-  head -n 3 iacta | tail -n 1
-  ```
+* [Task 4](./4-lastlines): Display the last 10 lines of $${\color{red}/etc/passwd}$$
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 7](./7-file): Write a shell script that creates a file named exactly \\\*\\\\'\"Best School\"\\'\\\\\*$\\\?\\\*\\\*\\\*\\\*\\\*:)" containing the text Best School ending by a new line.
-  ```
-  echo -e "Best School"  >> "\\*\\\\'\"Best School\"\\'\\\\*$\\?\\*\\*\\*\\*\\*:)"
-  ```
+    ```
+    tail /etc/passwd
+    ```
+  </details>
 
-* [Task 8](./8-cwd_state): Write a script that writes into the file ls_cwd_content the result of the command ls -la. If the file ls_cwd_content already exists, it should be overwritten. If the file ls_cwd_content does not exist, create it.
-  ```
-  ls -la > ls_cwd_content
-  ```
+* [Task 5](./5-firstlines): Display the first 10 lines of $${\color{red}/etc/passwd}$$
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 9](./9-duplicate_last_line): Write a script that duplicates the last line of the file iacta
+    ```
+    head /etc/passwd
+    ```
+  </details>
 
-  * The file iacta will be in the working directory
-  ```
-  tail -1 iacta >> iacta 
-  ```
+* [Task 6](./6-third_line): Write a script that displays the third line of the file $${\color{red}iacta}$$.
 
-* [Task 10](./10-no_more_js): Write a script that deletes all the regular files (not the directories) with a .js extension that are present in the current directory and all its subfolders.
-  ```
-  find . -type f -name '*.js' -delete
-  ```
+  The file $${\color{red}iacta}$$ will be in the working directory
+
+  * You’re not allowed to use $${\color{red}sed}$$
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    head -n 3 iacta | tail -n 1
+    ```
+  </details>
+
+* [Task 7](./7-file): Write a shell script that creates a file named exactly $${\color{red}\backslash * \backslash \backslash '"Best \space School" \backslash ' \backslash \backslash *\\$ \backslash ? \backslash * \backslash * \backslash * \backslash * \backslash * :)}$$ containing the text Best School ending by a new line.
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    echo -e "Best School"  >> "\\*\\\\'\"Best School\"\\'\\\\*$\\?\\*\\*\\*\\*\\*:)"
+    ```
+  </details>
+
+* [Task 8](./8-cwd_state): Write a script that writes into the file $${\color{red}ls\\_cwd\\_content}$$ the result of the command $${\color{red}ls \space -la}$$. If the file $${\color{red}ls\\_cwd\\_content}$$ already exists, it should be overwritten. If the file $${\color{red}ls\\_cwd\\_content}$$ does not exist, create it.
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    ls -la > ls_cwd_content
+    ```
+  </details>
+
+* [Task 9](./9-duplicate_last_line): Write a script that duplicates the last line of the file $${\color{red}iacta}$$
+
+  * The file $${\color{red}iacta}$$ will be in the working directory
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    tail -1 iacta >> iacta 
+    ```
+  </details>
+
+* [Task 10](./10-no_more_js): Write a script that deletes all the regular files (not the directories) with a $${\color{red}.js}$$ extension that are present in the current directory and all its subfolders.
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    find . -type f -name '*.js' -delete
+    ```
+  </details>
 
 * [Task 11](./11-directories): Write a script that counts the number of directories and sub-directories in the current directory.
 
   * The current and parent directories should not be taken into account
   * Hidden directories should be counted
-  ```
-  find -mindepth 1 -type d | wc -l
-  ```
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    find -mindepth 1 -type d | wc -l
+    ```
+  </details>
 
 * [Task 12](./12-newest_files): Create a script that displays the 10 newest files in the current directory.
 
@@ -75,67 +123,111 @@
 
   * One file per line
   * Sorted from the newest to the oldest
-  ```
-  ls -t | head -n 10
-  ```
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    ls -t | head -n 10
+    ```
+  </details>
 
 * [Task 13](./13-unique): Create a script that takes a list of words as input and prints only words that appear exactly once.
 
   * Input format: One line, one word
   * Output format: One line, one word
   * Words should be sorted
-  ```
-  sort | uniq -u
-  ```
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 14](./14-findthatword): Display lines containing the pattern “root” from the file /etc/passwd
-  ```
-  grep root /etc/passwd
-  ```
+    ```
+    sort | uniq -u
+    ```
+  </details>
 
-* [Task 15](./15-countthatword): Display the number of lines that contain the pattern “bin” in the file /etc/passwd
-  ```
-  grep -c bin /etc/passwd
-  ```
+* [Task 14](./14-findthatword): Display lines containing the pattern “root” from the file $${\color{red}/etc/passwd}$$
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 16](./16-whatsnext): Display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd.
-  ```
-  grep -A 3 root /etc/passwd
-  ```
+    ```
+    grep root /etc/passwd
+    ```
+  </details>
 
-* [Task 17](./17-hidethisword): Display all the lines in the file /etc/passwd that do not contain the pattern “bin”.
-  ```
-  grep -v bin /etc/passwd
-  ```
+* [Task 15](./15-countthatword): Display the number of lines that contain the pattern “bin” in the file $${\color{red}/etc/passwd}$$
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 18](./18-letteronly): Display all lines of the file /etc/ssh/sshd_config starting with a letter.
+    ```
+    grep -c bin /etc/passwd
+    ```
+  </details>
+
+* [Task 16](./16-whatsnext): Display lines containing the pattern “root” and 3 lines after them in the file $${\color{red}/etc/passwd}$$.
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    grep -A 3 root /etc/passwd
+    ```
+  </details>
+
+* [Task 17](./17-hidethisword): Display all the lines in the file $${\color{red}/etc/passwd}$$ that do not contain the pattern “bin”.
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    grep -v bin /etc/passwd
+    ```
+  </details>
+
+* [Task 18](./18-letteronly): Display all lines of the file $${\color{red}/etc/ssh/sshd\\_config}$$ starting with a letter.
 
   * include capital letters as well
-  ```
-  grep "^[a-zA-z]" /etc/ssh/sshd_config
-  ```
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 19](./19-AZ): Replace all characters A and c from input to Z and e respectively.
-  ```
-  tr 'Ac' 'Ze'
-  ```
+    ```
+    grep "^[a-zA-z]" /etc/ssh/sshd_config
+    ```
+  </details>
 
-* [Task 20](./20-hiago): Create a script that removes all letters c and C from input.
-  ```
-  tr -d 'cC'
-  ```
+* [Task 19](./19-AZ): Replace all characters $${\color{red}A}$$ and $${\color{red}c}$$ from input to $${\color{red}Z}$$ and $${\color{red}e}$$ respectively.
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    tr 'Ac' 'Ze'
+    ```
+  </details>
+
+* [Task 20](./20-hiago): Create a script that removes all letters $${\color{red}c}$$ and $${\color{red}C}$$ from input.
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    tr -d 'cC'
+    ```
+  </details>
 
 * [Task 21](./21-reverse): Write a script that reverse its input.
-  ```
-  rev
-  ```
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    rev
+    ```
+  </details>
 
 * [Task 22](./22-users_and_homes): Write a script that displays all users and their home directories, sorted by users.
 
-  * Based on the the /etc/passwd file
-  ```
-  cut -d : -f 1,6 /etc/passwd | sort
-  ```
+  * Based on the the $${\color{red}/etc/passwd}$$ file
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    cut -d : -f 1,6 /etc/passwd | sort
+    ```
+  </details>
 
 * [Task 23](./23-empty_casks): Write a command that finds all empty files and directories in the current directory and all sub-directories.
 
@@ -143,41 +235,57 @@
   * Hidden files should be listed
   * One file name per line
   * The listing should end with a new line
-  * You are not allowed to use basename, grep, egrep, fgrep or rgrep
-  ```
-  find . -empty -printf %f'\n'
-  ```
+  * You are not allowed to use $${\color{red}basename}$$, $${\color{red}grep}$$, $${\color{red}egrep}$$, $${\color{red}fgrep}$$ or $${\color{red}rgrep}$$
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 24](./24-gifs): Write a script that lists all the files with a .gif extension in the current directory and all its sub-directories.
+    ```
+    find . -empty -printf %f'\n'
+    ```
+  </details>
+
+* [Task 24](./24-gifs): Write a script that lists all the files with a $${\color{red}.gif}$$ extension in the current directory and all its sub-directories.
 
   * Hidden files should be listed
   * Only regular files (not directories) should be listed
   * The names of the files should be displayed without their extensions
-  * The files should be sorted by byte values, but case-insensitive (file aaa should be listed before file bbb, file .b should be listed before file a, and file Rona should be listed after file jay)
+  * The files should be sorted by byte values, but case-insensitive (file $${\color{red}aaa}$$ should be listed before file $${\color{red}bbb}$$, file $${\color{red}.b}$$ should be listed before file $${\color{red}a}$$, and file $${\color{red}Rona}$$ should be listed after file $${\color{red}jay}$$)
   * One file name per line
   * The listing should end with a new line
-  * You are not allowed to use basename, grep, egrep, fgrep or rgrep
-  ```
-  
-  ```
+  * You are not allowed to use $${\color{red}basename}$$, $${\color{red}grep}$$, $${\color{red}egrep}$$, $${\color{red}fgrep}$$ or $${\color{red}rgrep}$$
+  <details>
+    <summary>Show answer</summary>
 
-* [Task 25](./25-acrostic): An acrostic is a poem (or other form of writing) in which the first letter (or syllable, or word) of each line (or paragraph, or other recurring feature in the text) spells out a word, message or the alphabet. The word comes from the French acrostiche from post-classical Latin acrostichis). As a form of constrained writing, an acrostic can be used as a mnemonic device to aid memory retrieval. Read more.
+    ```
+    
+    ```
+  </details>
+
+* [Task 25](./25-acrostic): An acrostic is a poem (or other form of writing) in which the first letter (or syllable, or word) of each line (or paragraph, or other recurring feature in the text) spells out a word, message or the alphabet. The word comes from the French acrostiche from post-classical Latin acrostichis). As a form of constrained writing, an acrostic can be used as a mnemonic device to aid memory retrieval. [Read more](https://en.wikipedia.org/wiki/Acrostic).
 
   Create a script that decodes acrostics that use the first letter of each line.
 
   * The ‘decoded’ message has to end with a new line
-  * You are not allowed to use grep, egrep, fgrep or rgrep
-  ```
-  cut -c 1 | paste -s -d ' ' | tr -d ' '
-  ```
+  * You are not allowed to use $${\color{red}grep}$$, $${\color{red}egrep}$$, $${\color{red}fgrep}$$ or $${\color{red}rgrep}$$
+  <details>
+    <summary>Show answer</summary>
+
+    ```
+    cut -c 1 | paste -s -d ' ' | tr -d ' '
+    ```
+  </details>
 
 * [Task 26](./26-the_biggest_fan): Write a script that parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.
 
   * Order by number of requests, most active host or IP at the top
-  * You are not allowed to use grep, egrep, fgrep or rgrep
-  ```
-  
-  ```
+  * You are not allowed to use $${\color{red}grep}$$, $${\color{red}egrep}$$, $${\color{red}fgrep}$$ or $${\color{red}rgrep}$$
+  <details>
+    <summary>Show answer</summary>
 
-### By Anthony Goutieras
+    ```
+    
+    ```
+  </details>
+
+### By $${\color{red}Anthony \space Goutieras}$$
   Weekly project from 10/10/25 to 19/10/25 for Holberton School Bordeaux
